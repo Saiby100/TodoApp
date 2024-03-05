@@ -12,6 +12,11 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+.navbar-brand {
+    font-weight: 500;
+    color: #505050;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +24,29 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #EBEBEB;
+}
+
+h1 {
+    color: #505050;
+    font-size: 28px;
+}
+
+.table-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.table-container th {
+    color: #505050;
+}
+
+.table-container button {
+    border: none;
+    padding: 5px 10px;
+    background-color: #51AEFF;
+    color: #ffffff;
+    border-radius: 5px;
 }
