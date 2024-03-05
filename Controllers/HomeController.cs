@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Text.Encodings.Web;
 using TodoApp.Models;
 
 namespace TodoApp.Controllers
@@ -21,6 +22,11 @@ namespace TodoApp.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public string Welcome(string message, int ID = 1)
+        {
+            return HtmlEncoder.Default.Encode($"Message: {message} num times: {ID}");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

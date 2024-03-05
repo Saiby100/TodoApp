@@ -242,7 +242,7 @@ namespace TodoApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TodoItem");
+                    b.ToTable("TodoItem", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

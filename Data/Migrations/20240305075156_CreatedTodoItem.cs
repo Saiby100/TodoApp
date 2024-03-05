@@ -5,7 +5,7 @@
 namespace TodoApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class AddTodoItemTable : Migration
+    public partial class CreatedTodoItem : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

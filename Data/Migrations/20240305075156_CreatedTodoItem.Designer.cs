@@ -12,8 +12,8 @@ using TodoApp.Data;
 namespace TodoApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240304085928_AddTodoItemTable")]
-    partial class AddTodoItemTable
+    [Migration("20240305075156_CreatedTodoItem")]
+    partial class CreatedTodoItem
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
