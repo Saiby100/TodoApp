@@ -4,33 +4,42 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>TodoItem</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="offset-lg-3">
+		<h1>Add To do Item</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 offset-lg-3 my-container">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <!--
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                -->
+                <input asp-for="Description" placeholder="Descripiton" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <!--
                 <label asp-for="Priority" class="control-label"></label>
-                <input asp-for="Priority" class="form-control" />
-                <span asp-validation-for="Priority" class="text-danger"></span>
+                -->
+                <div class="dropdown d-flex justify-content-end mt-2">
+                    <select asp-for="Priority" name="priority" class="custom-dropdown">
+                        <option value="" hidden disabled selected>Select Priority</option>
+						<option class="dropdown-option" value="low">low</option>
+						<option class="dropdown-option" value="medium">medium</option>
+						<option class="dropdown-option" value="high">high</option>
+					</select>
+					<span asp-validation-for="Priority" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-4 d-flex justify-content-end">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
