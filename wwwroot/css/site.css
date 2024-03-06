@@ -32,21 +32,39 @@ h1 {
     font-size: 28px;
 }
 
-.table-container {
+.row {
+    margin-top: 25px;
+}
+
+.my-container {
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 5px;
-    margin-top: 30px;
 }
 
-.table-container th {
+.my-container th {
     color: #505050;
 }
 
-.table-container button {
+.my-container button {
     border: none;
     padding: 5px 10px;
     background-color: #51AEFF;
     color: #ffffff;
     border-radius: 5px;
+}
+
+.table td {
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.custom-dropdown {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.dropdown-option {
+    background-color: #ffffff;
+    color: black;
 }
