@@ -33,10 +33,6 @@ h1 {
     margin: 0px;
 }
 
-.row {
-    margin-top: 25px;
-}
-
 .my-container {
     background-color: #ffffff;
     padding: 30px 40px;
@@ -68,4 +64,8 @@ h1 {
 .form-group textarea {
     min-height: 25vh;
     resize: none;
+}
+
+.auth-container button {
+    height: 3em;
 }
