@@ -29,7 +29,8 @@ body {
 
 h1 {
     color: #505050;
-    font-size: 28px;
+    font-size: 200%;
+    margin: 0px;
 }
 
 .row {
@@ -64,7 +65,7 @@ h1 {
     border-radius: 5px;
 }
 
-.dropdown-option {
-    background-color: #ffffff;
-    color: black;
+.form-group textarea {
+    min-height: 25vh;
+    resize: none;
 }
