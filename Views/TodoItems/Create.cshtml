@@ -4,36 +4,27 @@
     ViewData["Title"] = "Create";
 }
 
-<div class="row">
-    <div class="offset-lg-3">
-		<h1>Add To do Item</h1>
-    </div>
-</div>
-
-<div class="row">
+<div class="row mt-5">
     <div class="col-lg-6 offset-lg-3 my-container">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <!--
-                <label asp-for="Description" class="control-label"></label>
-                -->
-                <input asp-for="Description" placeholder="Descripiton" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+            <div class="add-header d-flex flex-column justify-content-between align-items-center mb-5 flex-sm-row gap-3">
+				<h1>Add To do Item</h1>
+				<div class="form-group">
+					<div class="dropdown">
+						<select asp-for="Priority" name="priority" class="custom-dropdown">
+							<option value="" hidden disabled selected>Select Priority</option>
+							<option class="dropdown-option" value="low">low</option>
+							<option class="dropdown-option" value="medium">medium</option>
+							<option class="dropdown-option" value="high">high</option>
+						</select>
+						<span asp-validation-for="Priority" class="text-danger"></span>
+					</div>
+				</div>
             </div>
             <div class="form-group">
-                <!--
-                <label asp-for="Priority" class="control-label"></label>
-                -->
-                <div class="dropdown d-flex justify-content-end mt-2">
-                    <select asp-for="Priority" name="priority" class="custom-dropdown">
-                        <option value="" hidden disabled selected>Select Priority</option>
-						<option class="dropdown-option" value="low">low</option>
-						<option class="dropdown-option" value="medium">medium</option>
-						<option class="dropdown-option" value="high">high</option>
-					</select>
-					<span asp-validation-for="Priority" class="text-danger"></span>
-                </div>
+                <textarea asp-for="Description" placeholder="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group mt-4 d-flex justify-content-end">
                 <input type="submit" value="Create" class="btn btn-primary" />
