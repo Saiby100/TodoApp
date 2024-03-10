@@ -43,17 +43,14 @@ h1 {
     color: #505050;
 }
 
-.my-container button {
-    border: none;
-    padding: 5px 10px;
-    background-color: #51AEFF;
-    color: #ffffff;
-    border-radius: 5px;
-}
-
 .table td {
     max-width: 200px;
     word-wrap: break-word;
+}
+
+.delete-btn img {
+    width: 30px;
+    height: auto;
 }
 
 .custom-dropdown {
