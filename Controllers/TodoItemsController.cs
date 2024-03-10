@@ -138,6 +138,7 @@ namespace TodoApp.Controllers
         }
 
         // POST: TodoItems/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
