@@ -4,21 +4,21 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="row mt-4">
+<div class="row mt-4 offset-lg-1">
 	<h1>To do List</h1>
 </div>
 
-<div class="row my-container mt-4">
+<div class="row my-container mt-4 col-lg-10 offset-lg-1">
 	<table class="table">
 		<thead>
 			<tr>
 				<th>
 					@Html.DisplayNameFor(model => model.Description)
 				</th>
-				<th>
+				<th class="text-center">
 					@Html.DisplayNameFor(model => model.Priority)
 				</th>
-				<th></th>
+				<th class="delete-col"></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,13 +27,15 @@
 				<td>
 					@Html.DisplayFor(modelItem => item.Description)
 				</td>
-				<td>
+				<td class="text-center">
 					@Html.DisplayFor(modelItem => item.Priority)
 				</td>
-				<td>
+				<td class="text-end">
 					<form asp-controller="TodoItems" asp-action="Delete" method="post">
 						<input type="hidden" name="id" value="@item.Id" />
-						<button type="submit">Delete</button>
+						<button type="submit" class="delete-btn p-1 btn btn-primary">
+							<img src="~/images/trash.svg" alt="delete"/>
+						</button>
 					</form>
 				</td>
 			</tr>
